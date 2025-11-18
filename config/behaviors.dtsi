@@ -1,0 +1,23 @@
+/ {
+    behaviors {
+        compatible = "zmk,behaviors";
+
+        bs_shift_del: bs_shift_del {
+            label = "BS_SHIFT_DEL";
+            compatible = "zmk,behavior-macro";
+            bindings = <&kp DEL>;
+            conditions = <&held_shift>;
+        };
+
+        press_backspace: condition {
+            compatible = "zmk,condition-pressed";
+            keys = <&kp BSPC>;
+        };
+
+        held_shift: condition {
+            compatible = "zmk,condition-held";
+            keys = <&kp LSHIFT>;
+        };
+    };
+};
+
