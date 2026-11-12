@@ -88,8 +88,8 @@
                         bindings = <
 &kp  TAB    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &bspc_del
 &kp  ESC      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp SQT
-&kp  LSHIFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp CAPS                                           &mo BT &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &mt RSHIFT ENTER
-                                                        &mo MOUSE     &ctrl_gui_td    &mt  LGUI ENTER    &mo  LOWER            &mo  HIGHER    &kp  SPACE    &kp  LALT     &trans
+&kp  LSHIFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &trans                                           &mo BT &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &mt RSHIFT ENTER
+                                                        &mo MOUSE     &ctrl_gui_td    &mt  LGUI ENTER    &mo  LOWER            &mo  HIGHER    &kp  SPACE    &kp  LALT     &kp CAPS
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
