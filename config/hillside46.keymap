@@ -15,8 +15,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT       0
-#define LOWER         1
-#define HIGHER        2
+#define HIGHER        1
+#define LOWER         2
 #define BT            3
 #define MOUSE         4
 #define MOUSE_SCROLL  5
@@ -104,6 +104,24 @@
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
+                higher_layer {
+/* SYM
+ * -------------------------------------------------------------------------------------------------------------------------------------
+ * | INS   |   !   |   @   |   #   |   $   |   %   |-----------------------------------|   ^   |   &   |   *   |   (   |   )   | BSPC  |
+ * |       |   \   |   -   |   =   |   [   |   ]   |-----------------------------------| HOME  | Shift | Ctrl  | Alt   | Gui   | END   |
+ * | Ctrl  |   |   |   _   |   +   |   {   |   }   |SkAltGr|-------------------| MENU  | Mute  | Vol-  | Vol+  | Play  |       | Ctrl  |
+ *                                 |       |       |       |  ADJ_L |---|      |       |       |       |
+ */
+                        bindings = <
+&kp  TAB      &kp  F1     &kp  F2       &kp  F3     &kp  F4   &kp  F5                                                                   &kp  F6    &kp  F7     &kp  F8    &kp  F9     &kp  F10     &kp F11
+&kp LALT         &kp  C_BRI_DEC     &kp  C_BRI_INC    &kp  C_VOL_DN    &kp  C_VOL_UP     &kp  C_MUTE                                                                      &kp  LEFT     &kp  DOWN    &kp  UP    &kp  RIGHT     &kp  F11     &kp F12
+&kp LSHIFT       &none     &none    &kp  C_PREV     &kp  C_NEXT     &kp  C_PP     &none                                          &none     &kp  HOME   &kp  PG_DN &kp  PG_UP &kp END     &none         &kp RSHIFT
+                                                        &trans       &ctrl_gui_td    &mt  LGUI ENTER       &lt LOWER LGUI               &trans       &trans        &trans        &trans
+                        >;
+
+                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+                };
+
                 lower_layer {
 /* NAV
  * -------------------------------------------------------------------------------------------------------------------------------------
@@ -119,24 +137,6 @@
 &kp LSHIFT        &kp  N6       &kp  N7       &kp  N8       &kp  N9       &kp  N0       &none                                           &none     &kp   GRAVE      &kp  UNDER      &kp   PLUS      &kp   LEFT_BRACKET      &kp  RIGHT_BRACKET      &kp RSHIFT
                                                         &trans        &trans        &trans        &trans                 &cw_gui LGUI 0    &kp SPACE        &kp LALT        &kp CAPS
 
-                        >;
-
-                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
-                higher_layer {
-/* SYM
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | INS   |   !   |   @   |   #   |   $   |   %   |-----------------------------------|   ^   |   &   |   *   |   (   |   )   | BSPC  |
- * |       |   \   |   -   |   =   |   [   |   ]   |-----------------------------------| HOME  | Shift | Ctrl  | Alt   | Gui   | END   |
- * | Ctrl  |   |   |   _   |   +   |   {   |   }   |SkAltGr|-------------------| MENU  | Mute  | Vol-  | Vol+  | Play  |       | Ctrl  |
- *                                 |       |       |       |  ADJ_L |---|      |       |       |       |
- */
-                        bindings = <
-&kp  TAB      &kp  F1     &kp  F2       &kp  F3     &kp  F4   &kp  F5                                                                   &kp  F6    &kp  F7     &kp  F8    &kp  F9     &kp  F10     &kp F11
-&kp LALT         &kp  C_BRI_DEC     &kp  C_BRI_INC    &kp  C_VOL_DN    &kp  C_VOL_UP     &kp  C_MUTE                                                                      &kp  LEFT     &kp  DOWN    &kp  UP    &kp  RIGHT     &kp  F11     &kp F12
-&kp LSHIFT       &none     &none    &kp  C_PREV     &kp  C_NEXT     &kp  C_PP     &none                                          &none     &kp  HOME   &kp  PG_DN &kp  PG_UP &kp END     &none         &kp RSHIFT
-                                                        &trans       &ctrl_gui_td    &mt  LGUI ENTER       &kp LGUI               &trans       &trans        &trans        &trans
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
