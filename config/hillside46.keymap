@@ -83,7 +83,7 @@
             tapping-term-ms = <200>;
             flavor = "hold-preferred";
             hold-while-undecided;
-            bindings = <&kp>, <&td_caps>;
+            bindings = <&kp LGUI>, <&td_caps>;
           };
         };
 
@@ -146,7 +146,7 @@
 &kp  TAB     &kp  EXCL       &kp  AT       &kp  HASH       &kp  DOLLAR       &kp  PERCENT                                                                        &kp   CARET      &kp   AMPERSAND      &kp   ASTERISK      &kp   LPAR      &kp  RPAR       &bspc_del
 &kp  LCTRL      &kp  N1     &kp  N2     &kp  N3    &kp  N4    &kp  N5                                                                     &kp   TILDE   &kp  MINUS    &kp   EQUAL      &kp   LEFT_BRACE    &kp  RIGHT_BRACE    &kp BACKSLASH
 &kp LSHIFT        &kp  N6       &kp  N7       &kp  N8       &kp  N9       &kp  N0       &none                                           &none     &kp   GRAVE      &kp  UNDER      &kp   PLUS      &kp   LEFT_BRACKET      &kp  RIGHT_BRACKET      &kp RSHIFT
-                                                        &trans        &trans        &trans        &trans                 &cw_gui LGUI 0    &kp SPACE        &kp LALT        &kp CAPS
+                                                        &trans        &trans        &trans        &trans                 &cw_gui    &kp SPACE        &kp LALT        &kp CAPS
 
                         >;
 
