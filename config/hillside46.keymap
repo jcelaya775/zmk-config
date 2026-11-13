@@ -36,6 +36,11 @@
             if-layers = <HIGHER MOUSE>;
             then-layer = <MOUSE_SCROLL>;
           };
+
+          higher_lower {
+            if-layers = <HIGHER LOWER>;
+            then-layer = <LOWER>;
+          };
         };
 
         macros {
